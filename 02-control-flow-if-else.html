@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>02 - Control Flow (If / Else)</title>
+</head>
+<body>
+
+    <h2>Modul 1.2: Control Flow / Logika Percabangan (Fase 1)</h2>
+    <hr>
+    
+    <!-- Tempat menampilkan hasil keputusan logika -->
+    <h3 id="status-kelulusan"></h3>
+    <p id="detail-nilai"></p>
+
+    <script>
+        // --- 1. LOGIKA MURNI (Variabel & Pengondisian) ---
+        let namaMahasiswa = "Dika Prasetyawan";
+        let nilaiUjian = 85;
+        let grade = "";
+
+        // PENGONDISIAN (IF / ELSE IF / ELSE)
+        if (nilaiUjian >= 85) {
+        grade = "A";
+        } else if (nilaiUjian >= 75) {
+        grade = "B";
+        } else if (nilaiUjian >= 65) {
+            grade = "C";
+        } else {
+            grade = "D";
+        }
+
+        // --- 2. TEMPELKAN KE HTML ---
+        document.getElementById("status-kelulusan").innerText = `Grade: ${grade}`;
+        document.getElementById("detail-nilai").innerText = 
+            `Mahasiswa bernama ${namaMahasiswa} mendapatkan nilai ${nilaiUjian} (Grade: ${grade}).`;
+
+        // Log di console
+        console.log("Nama:", namaMahasiswa);
+        console.log("Nilai:", nilaiUjian);
+        console.log("Grade:", grade);
+    </script>
+
+</body>
+</html>
