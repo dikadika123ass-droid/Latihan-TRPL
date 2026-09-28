@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>01 - Variabel & Tipe Data</title>
+</head>
+<body>
+
+    <h2>Modul 1.1: Variabel & Tipe Data (Fase 1)</h2>
+    <hr>
+    
+    <!-- Tempat menampilkan hasil logika di halaman Web -->
+    <p id="hasil-teks"></p>
+
+    <script>
+        // --- 1. LOGIKA MURNI (Membuat Variabel & Tipe Data) ---
+        let namaMahasiswa = "Dika Prasetyawan";       // String
+        let umur = 18;                                // Number
+        let isStatusAktif = true;                     // Boolean
+        let jurusan = "TRPL";                         // String
+
+        // --- 2. TEMPELKAN KE HTML (Visualisasi Sederhana) ---
+        document.getElementById("hasil-teks").innerText = 
+            "Halo, nama saya " + namaMahasiswa + 
+            ", umur saya " + umur + " tahun. Status mahasiswa: " + isStatusAktif + ", Program Studi " + jurusan;
+            
+        // Mencetak log di console browser
+        console.log("Nama:", namaMahasiswa);
+        console.log("Umur:", umur);
+        console.log("Status Aktif:", isStatusAktif);
+        console.log("Program Studi:", jurusan);
+    </script>
+
+</body>
+</html>
