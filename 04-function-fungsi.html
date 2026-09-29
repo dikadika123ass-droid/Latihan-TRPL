@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>04 - Function (Fungsi)</title>
+</head>
+<body>
+
+    <h2>Modul 1.4: Function / Fungsi (Fase 1)</h2>
+    <hr>
+    
+    <!-- Tombol untuk memicu function di JavaScript -->
+    <button onclick="sapaMahasiswa('Dika')">Sapa Dika</button>
+    <button onclick="sapaMahasiswa('Budi')">Sapa Budi</button>
+    <button onclick="sapaMahasiswa('Ani')">Sapa Ani</button>
+
+    <h3 id="pesan-sapaan">Klik tombol di atas untuk menyapa!</h3>
+
+    <script>
+        // --- 1. MEMBUAT FUNGSI (FUNCTION) ---
+        // 'nama' di dalam kurung adalah PARAMETER (input)
+        function sapaMahasiswa(nama) {
+            
+            // Logika di dalam fungsi
+            let kalimatSapaan = `Halo Selamat Datang, ${nama}! Semangat belajar TRPL-nya!`;
+            
+            // Menampilkan hasil ke elemen HTML
+            document.getElementById("pesan-sapaan").innerText = kalimatSapaan;
+            
+            // Log ke console
+            console.log(`Fungsi dijalankan untuk: ${nama}`);
+        }
+    </script>
+
+</body>
+</html>
