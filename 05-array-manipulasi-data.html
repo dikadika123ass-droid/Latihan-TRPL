@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>05 - Array & Manipulasi Data</title>
+</head>
+<body>
+
+    <h2>Modul 1.5: Array & Manipulasi Data (Fase 1)</h2>
+    <hr>
+
+    <h3>Daftar Anggota Kelompok TRPL:</h3>
+    <ol id="daftar-kelompok"></ol>
+
+    <script>
+        // --- 1. MEMBUAT ARRAY (Menggunakan kurung siku []) ---
+        // Index:        0       1        2
+        let mahasiswa = ["Dika", "Budi", "Siti"];
+
+        // Menambahkan data baru ke dalam Array menggunakan .push()
+        mahasiswa.push("Rian");
+
+        // --- 2. TAMPILKAN KE HTML DENGAN LOOPING ---
+        let elemenOl = document.getElementById("daftar-kelompok");
+
+        // .length digunakan untuk menghitung total isi array secara otomatis
+        for (let i = 0; i < mahasiswa.length; i++) {
+            let itemLi = document.createElement("li");
+            
+            // Mengambil data array berdasarkan index-nya [i]
+            itemLi.innerText = mahasiswa[i];
+            
+            elemenOl.appendChild(itemLi);
+        }
+
+        // Cek log di Console Browser (F12)
+        console.log("Total Mahasiswa:", mahasiswa.length);
+        console.log("Mahasiswa Pertama (Index 0):", mahasiswa[0]);
+    </script>
+
+</body>
+</html>
