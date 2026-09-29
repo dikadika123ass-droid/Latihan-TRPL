@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>03 - Looping (Perulangan)</title>
+</head>
+<body>
+
+    <h2>Modul 1.3: Looping / Perulangan (Fase 1)</h2>
+    <hr>
+    
+    <h3>Daftar Absensi Mahasiswa TRPL:</h3>
+    <!-- Tempat menampilkan daftar hasil looping -->
+    <ul id="daftar-mhs"></ul>
+
+    <script>
+        // --- 1. LOGIKA MURNI (Looping FOR) ---
+        let totalMahasiswa = 10;
+        let elemenDaftar = document.getElementById("daftar-mhs");
+
+        // Perulangan FOR: mulai dari 1 sampai 5
+        for (let i = 1; i <= totalMahasiswa; i++) {
+            
+            // Membuat elemen list (<li>) baru lewat JavaScript
+            let itemBaru = document.createElement("li");
+            
+            // Mengisi teks ke dalam list
+            itemBaru.innerText = `Mahasiswa Ke-${i}: Dika Prasetiawan`;
+            
+            // Menempelkan elemen list ke dalam <ul> di HTML
+            elemenDaftar.appendChild(itemBaru);
+
+            // Log di console browser
+            console.log(`Putaran perulangan ke-${i}`);
+        }
+    </script>
+
+</body>
+</html>
